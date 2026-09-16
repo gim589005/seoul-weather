@@ -22,7 +22,7 @@ def load_data():
   url = "https://raw.githubusercontent.com/greatsong/modudata/main/data/seoul.csv"
 
   # CSV 읽기 (한글 컬럼 대응)
-  df = pd.read_csv(url, encoding="cp949")
+  df = pd.read_csv(url, encoding="cp949", encoding='utf-8')
 
   # 컬럼명 공백 제거
   df.columns = df.columns.str.strip()
